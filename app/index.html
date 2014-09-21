@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="format-detection" content="telephone=no" />
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" type="text/css" href="styles/kendo.mobile.all.min.css" />
+		
+		<title>Application</title>
+		
+		<script src="cordova.js"></script>
+		<script src="scripts/jquery.min.js"></script>
+		<script src="scripts/kendo.mobile.min.js"></script>
+
+        <!-- Config -->
+        <script src="scripts/config.js"></script>
+        
+        <!-- Libs -->
+		<script src="scripts/fastclick.js"></script>
+        
+        <!-- Models -->
+        <script src="models/events.js"></script>
+        
+        <!-- View Models -->
+        <script src="viewmodels/account/login.js"></script>
+        <script src="viewmodels/account/register.js"></script>
+        <script src="viewmodels/account/logout.js"></script>
+        <script src="viewmodels/account/forgot-password.js"></script>
+        <script src="viewmodels/welcome.js"></script>
+        
+        <!-- Runtime -->
+        <script src="scripts/app.js"></script>
+	</head>
+	<body id="app">
+		<!-- Required -->
+		<div id="default-view"
+			data-role="view"
+			data-title="Home">
+			<div class="view-content">
+			</div>
+		</div>
+		
+		<!-- Default Layout -->
+		<div data-role="layout" data-id="default-layout">
+			<!--Header-->
+			<div data-role="header">
+				<div data-role="navbar">
+					<a data-role="backbutton" data-align="left"></a>
+					<span data-role="view-title"></span>
+				</div>
+			</div>
+			<footer data-role="footer">
+				<div data-role="tabstrip">
+					<a href="#views/welcome.html" data-icon="home">Home</a>
+					<a href="#views/account/logout.html" data-icon="action">Logout</a>
+				</div>
+			</footer>
+		</div>
+		
+		<!-- Header Only Layout -->
+		<div data-role="layout" data-id="footless-layout">
+			<!--Header-->
+			<div data-role="header">
+				<div data-role="navbar">
+					<a data-role="backbutton" data-align="left"></a>
+					<span data-role="view-title"></span>
+				</div>
+			</div>
+			<footer data-role="footer"></footer>
+		</div>
+		
+		<!-- No Header or Footer Layout -->
+		<div data-role="layout" data-id="navless-layout">
+			<!--Header-->
+			<div data-role="header"></div>
+			<footer data-role="footer"></footer>
+		</div>
+	</body>
+</html>

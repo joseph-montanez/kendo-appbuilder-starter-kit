@@ -1,0 +1,72 @@
+<div id="accounts-register-view"
+			 data-role="view"
+			 data-title="Register"
+			 data-layout="footless-layout"
+			 data-model="app.accountRegisterService.viewModel"
+			 data-init="app.accountRegisterService.init"
+			 data-before-show="app.accountRegisterService.beforeShow"
+			 data-show="app.accountRegisterService.show"
+			 data-use-native-scrolling="true"
+			 data-transition="slide">
+	<form class="login-form">
+		<ul data-role="listview" data-style="inset">
+			<li>
+				<label>
+					First Name
+					<input type="text" value="" placeholder="John" data-bind="value: first_name" />
+				</label>
+			</li>
+			<li data-bind="visible: errors.first_name[0]">
+				<label class="error form-error" data-bind="text: errors.first_name[0]"></label>
+			</li>
+			<li>
+				<label>
+					Last Name
+					<input type="text" value="" placeholder="Doe" data-bind="value: last_name" />
+				</label>
+			</li>
+			<li data-bind="visible: errors.last_name[0]">
+				<label class="error form-error" data-bind="text: errors.last_name[0]"></label>
+			</li>
+			<li>
+				<label>
+					Email
+					<input type="email" value="" placeholder="hello@gmail.com" data-bind="value: email" />
+				</label>
+			</li>
+			<li data-bind="visible: errors.email[0]">
+				<label class="error form-error" data-bind="text: errors.email[0]"></label>
+			</li>
+			<li>
+				<label>
+					Password
+					<input type="password" value="" placeholder="*******" data-bind="value: password" />
+				</label>
+			</li>
+			<li data-bind="visible: errors.password[0]">
+				<label class="error form-error" data-bind="text: errors.password[0]"></label>
+			</li>
+			<li>
+				<i></i> <a class="register" data-role="button" data-bind="click: onRegister">Register</a>
+			</li>
+			<li>
+				<a href="#views/account/login.html">Login</a>
+			</li>
+		</ul>
+	    <style scoped>
+	        #accounts-register-view .km-button:not(.km-back)
+	        {
+	            width: 100%;
+	            box-sizing: border-box;
+	            -moz-box-sizing: border-box;
+	            -webkit-box-sizing: border-box;
+	        }
+	        #accounts-register-view .error.form-error {
+	        	display: block;
+	        	color: red;
+	        	clear: left;
+	        	text-align: center;
+	        }
+	    </style>
+	<div data-role="footer"></div>
+</div>
