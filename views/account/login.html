@@ -1,0 +1,44 @@
+<div id="accounts-login-view"
+	class="login-view login-bg"
+	data-role="view"
+	data-layout="navless-layout"
+	data-model="app.accountLoginService.viewModel"
+	data-before-show="app.accountLoginService.beforeShow"
+	data-show="app.accountLoginService.show">
+	<h1>Application Title</h1>
+	<form class="login-form">
+		<ul data-role="listview" data-style="inset">
+			<li>
+				<label>
+					Email
+					<input type="email" value="" placeholder="hello@gmail.com" data-bind="value: email" />
+				</label>
+			</li>
+			<li>
+				<label>
+					Password
+					<input type="password" value="" placeholder="*******" data-bind="value: password" />
+				</label>
+			</li>
+			<li>
+				<i></i> <a data-role="button" data-bind="click: onLogin">Sign In</a>
+			</li>
+			<li>
+				<a href="#views/account/register.html">Register</a>
+			</li>
+			<li>
+				<a href="#views/account/forgot-password.html" class="login-btn">Forgot Password</a>
+			</li>
+		</ul>
+	    <style scoped>
+	        .login-view .km-button:not(.km-back)
+	        {
+	            width: 100%;
+	            box-sizing: border-box;
+	            -moz-box-sizing: border-box;
+	            -webkit-box-sizing: border-box;
+	        }
+	    </style>
+		
+	</form>
+</div>
